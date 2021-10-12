@@ -1,0 +1,181 @@
+//nav
+.nav {
+  display: flex;
+  margin-right: 0;
+  padding: 4rem;
+  gap: 10rem;
+  &__list {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+    margin-left: auto;
+    position: relative;
+    z-index: 30;
+  }
+  &__list-item {
+    position: relative;
+    z-index: 25;
+  }
+
+  &__link:link,
+  &__link:visited {
+    color: $color-white;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom-width: 0;
+    transition: all 0.3s;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      background-image: linear-gradient(
+        to right top,
+        #ffffff,
+        #cccccc,
+        #9a9a9a,
+        #6c6c6c,
+        #414141,
+        #333335,
+        #262629,
+        #191a1e,
+        #20242b,
+        #252e37,
+        #293944,
+        #2c4550
+      );
+      z-index: -1;
+      bottom: 4px;
+      left: 0;
+      transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
+        background-color 0.1s;
+    }
+  }
+
+  &__link:hover,
+  &__link:active,
+  &__link.active {
+    @extend %text-moon-effect;
+    &::before {
+      width: 70%;
+      height: 50%;
+    }
+  }
+
+  &__icon {
+    width: 3.2rem;
+    height: 3.2rem;
+    cursor: pointer;
+    border: none;
+    &:hover {
+      animation: none;
+      color: $color-sun;
+      animation: 4s sun-burn;
+    }
+  }
+}
+
+//Side
+.side {
+  &__logo {
+    display: flex;
+    justify-content: center;
+  }
+  &__branding {
+    font-size: 4.8rem;
+    font-weight: 700;
+  }
+  &__social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    &-icon {
+      width: 2rem;
+      height: 2rem;
+      color: rgba($color: $color-white, $alpha: 0.7);
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s;
+      &:hover {
+        transform: rotate(360deg) scale(1.5);
+        color: yellowgreen;
+      }
+    }
+  }
+}
+
+//Hero Section
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  &__header {
+    flex: 2;
+    width: 50%;
+    padding: 6rem;
+    &-title {
+      font-size: 7.2rem;
+      font-weight: 700;
+      line-height: 7.9rem;
+    }
+    &-text {
+      font-style: normal;
+      font-size: 1.8rem;
+      font-weight: 500;
+      line-height: 2.7rem;
+      margin-top: 2.5rem;
+    }
+  }
+  &__footer {
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: stretch;
+    flex: 1;
+    background: radial-gradient(
+      100% 2631.09% at 0% 0%,
+      rgba(0, 0, 0, 0.42) 0%,
+      rgba(0, 0, 0, 0.558) 100%
+    );
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    & > *:not(:first-child) {
+      padding: 4rem 0;
+    }
+    &-img {
+      height: 100%;
+    }
+    &-explore {
+      max-width: 30rem;
+      position: relative;
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 8rem;
+        height: 1.5rem;
+        border-bottom: 4px solid rgba($color-white, 1);
+        border-right: 7px solid rgba($color-white, 1);
+        transform: skewX(60deg);
+        position: absolute;
+        right: -10rem;
+      }
+    }
+    &-footprint {
+      max-width: 20rem;
+    }
+  }
+}
+
+//DL
+.dl {
+  &__title {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+  &__text {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+}

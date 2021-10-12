@@ -1,0 +1,60 @@
+//Colors
+$color-primary: #2c4550;
+$color-primary-black: #0c0c0c;
+
+$color-white: #fff;
+
+$color-sun: rgba(255, 208, 0, 0.993);
+
+//Font-Sizes
+$default-font-size: 1.6rem;
+
+//Widths
+$container-max-width: 160rem;
+
+@keyframes sun-burn {
+  0% {
+    transform: rotate(0deg) scale(1.8);
+
+    filter: drop-shadow(-2vw 0 0.5rem $color-sun);
+  }
+  10% {
+    filter: drop-shadow(-10vw 0 0.5rem $color-sun);
+  }
+  20% {
+    filter: drop-shadow(-20vw 0 0.5rem $color-sun);
+  }
+  30% {
+    transform: rotate(180deg);
+
+    filter: drop-shadow(-30vw 0 0.5rem $color-sun);
+  }
+  40% {
+    transform: scale(1.3);
+    filter: drop-shadow(-40vw 0 0.5rem $color-sun);
+  }
+  50% {
+    transform: scale(1.4);
+
+    filter: drop-shadow(-50vw 0 0.5rem $color-sun);
+  }
+  60% {
+    transform: rotate(180deg);
+
+    filter: drop-shadow(-60vw 0 0.5rem $color-sun);
+  }
+  70% {
+    filter: drop-shadow(-70vw 0 0.5rem $color-sun);
+  }
+  80% {
+    filter: drop-shadow(-80vw 0 0.5rem $color-sun);
+  }
+  90% {
+    transform: rotate(-180deg);
+    filter: drop-shadow(-90vw 0 0.5rem $color-sun);
+  }
+  100% {
+    transform: rotate(360deg);
+    filter: drop-shadow(-100vw 0 0.5rem $color-sun);
+  }
+}
